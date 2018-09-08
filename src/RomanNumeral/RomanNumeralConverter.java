@@ -49,27 +49,27 @@ public class RomanNumeralConverter {
     }
 
     public static int ConvertToArabic(String romanNumerals) throws InvalidRomanCharacterException {
-        // Check that the user did not put in any invalid characters
-        for (int i = 0; i < romanNumerals.length(); i++) {
-            String singleChar = String.valueOf(romanNumerals.charAt(i));
-            if (!romanLetterList.contains(singleChar)) {
-                throw new InvalidRomanCharacterException("Character '" + singleChar + "' is not a valid roman letter!");
+            // Check that the user did not put in any invalid characters
+            for (int i = 0; i < romanNumerals.length(); i++) {
+                String singleChar = String.valueOf(romanNumerals.charAt(i));
+                if (!romanLetterList.contains(singleChar)) {
+                    throw new InvalidRomanCharacterException("Character '" + singleChar + "' is not a valid roman letter!");
+                }
             }
-        }
 
-        int returnValue = 0;
-        for (int i = 0; i < romanNumerals.length(); i++) {
-            String c = String.valueOf(romanNumerals.charAt(i));
-            // If the current letter is less than the next letter, we need to subtract the current letter from the next and add all that to our running total
-            if (i != romanNumerals.length()-1 && GetValueOfNumeral(c) < GetValueOfNumeral(String.valueOf(romanNumerals.charAt(i+1)))) {
-                returnValue += GetValueOfNumeral(String.valueOf(romanNumerals.charAt(i+1))) - GetValueOfNumeral(c);
-                i++;
+            int returnValue = 0;
+            for (int i = 0; i < romanNumerals.length(); i++) {
+                String c = String.valueOf(romanNumerals.charAt(i));
+                // If the current letter is less than the next letter, we need to subtract the current letter from the next and add all that to our running total
+                if (i != romanNumerals.length()-1 && GetValueOfNumeral(c) < GetValueOfNumeral(String.valueOf(romanNumerals.charAt(i+1)))) {
+                    returnValue += GetValueOfNumeral(String.valueOf(romanNumerals.charAt(i+1))) - GetValueOfNumeral(c);
+                    i++;
 
-            // Otherwise, just add that value to the running total
-            } else {
-                returnValue += GetValueOfNumeral(c);
+                    // Otherwise, just add that value to the running total
+                } else {
+                    returnValue += GetValueOfNumeral(c);
+                }
             }
-        }
 
         return returnValue;
     }
