@@ -31,4 +31,4 @@ Ryan Denney -
 
 Ben Lawson - Added content to the README.md file, created the code for the RomanNumeralConverter class, and wrote unit testing for ```GetValueOfNumeral()``` and ```GetNumeralOfValue()```.
 
-Justin Wynkoop -
+Justin Wynkoop - Created ConvertToArabic() unit test. Added content to the README.md file.
