@@ -27,7 +27,7 @@ The example above will print out ```"XV"```.
 ## Group Members
 Mike Bastian - Created the README.md file and created unit tests.
 
-Ryan Denney -
+Ryan Denney - Added unit tests.
 
 Ben Lawson - Added content to the README.md file, created the code for the RomanNumeralConverter class, and wrote unit testing for ```GetValueOfNumeral()``` and ```GetNumeralOfValue()```.
 
