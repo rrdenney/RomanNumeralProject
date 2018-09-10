@@ -1,0 +1,89 @@
+package RomanNumeralTest;
+
+import RomanNumeral.InvalidRomanCharacterException;
+import RomanNumeral.RomanNumeralConverter;
+import RomanNumeral.WrongNumberFormatException;
+import org.junit.Assert;
+import org.junit.Test;
+
+public class RDENNEY {
+
+    // Testing Numbers
+	@Test
+    public void GetNumberFromNumeral_IV() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("IV");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(4, value);
+    }
+
+	@Test
+    public void GetNumberFromNumeral_VI() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("VI");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(6, value);
+    }
+
+	@Test
+    public void GetNumberFromNumeral_L() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("L");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(50, value);
+    }
+
+	@Test
+    public void GetNumberFromNumeral_C() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("C");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(100, value);
+    }
+
+	@Test
+    public void GetNumberFromNumeral_D() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("D");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(500, value);
+    }
+
+    @Test
+    public void GetNumberFromNumeral_M() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("M");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(1000, value);
+    }
+
+    @Test
+    public void GetNumberFromNumeral_V() {
+        int value = 0;
+        try {
+            value = RomanNumeralConverter.GetValueOfNumeral("V");
+        } catch (InvalidRomanCharacterException e) {
+            e.printStackTrace();
+        }
+        Assert.assertEquals(5, value);
+    }
+
+}
